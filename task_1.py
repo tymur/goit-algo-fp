@@ -85,7 +85,6 @@ class LinkedList:
 
     # 3) Злиття двох відсортованих списків
 
-
     @staticmethod
     def merge_sorted_lists(a: "LinkedList", b: "LinkedList") -> "LinkedList":
         """Зливає два відсортовані списки в один відсортований."""

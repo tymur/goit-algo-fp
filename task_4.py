@@ -42,11 +42,6 @@ def draw_tree(tree_root):
 #   -- візуалізація бінарної купи -- 
 
 def heap_to_tree(heap, color_rule="root-min"):
-    """
-    Перетворює масив-купу (list) у бінарне дерево Node та повертає його корінь.
-    - heap: масив (мін-/макс-купа), дозволено None-дирки, вони ігноруються
-    - color_rule: просте підсвічування ('root-min', 'level', None)
-    """
     if not heap:
         raise ValueError("Порожня купа")
 
@@ -66,7 +61,7 @@ def heap_to_tree(heap, color_rule="root-min"):
     # прості варіанти підсвічення
     if color_rule == "root-min":
         # корінь — темніший; діти — звичайні
-        nodes[0].color = "#66b3ff"  # трохи темніший синій
+        nodes[0].color = "#66b3ff"  # темніший синій
     elif color_rule == "level":
         # фарбуємо рівні в різні відтінки
         level = 0
@@ -84,9 +79,6 @@ def heap_to_tree(heap, color_rule="root-min"):
     return nodes[0]  # корінь дерева
 
 def draw_heap(heap, color_rule="root-min"):
-    """
-    фасад: з масиву-купи → дерево → малюнок.
-    """
     root = heap_to_tree(heap, color_rule=color_rule)
     draw_tree(root)
 

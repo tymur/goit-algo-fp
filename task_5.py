@@ -95,12 +95,6 @@ def nodes_iterative_dfs(root):
 
 # Візуалізація кроків обходу
 def animate_traversal(root, mode="bfs", pause=0.6, start_hex="#08306B", end_hex="#DEEBF7"):
-    """
-    Малює анімацію обходу дерева.
-    mode: "bfs" або "dfs"
-    pause: пауза між кадрами (сек.)
-    Кольори переходять від темного до світлого відповідно до порядку відвідування.
-    """
     g, pos = build_graph(root)
 
     # Порядок відвідування
@@ -131,7 +125,7 @@ def animate_traversal(root, mode="bfs", pause=0.6, start_hex="#08306B", end_hex=
 # Приклад використання
 
 if __name__ == "__main__":
-    # Побудуємо прикладне дерево (як у твоєму попередньому завданні)
+    # Побудуємо прикладне дерево
     root = Node(0)
     root.left = Node(4)
     root.left.left = Node(5)
